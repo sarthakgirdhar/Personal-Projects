@@ -25,37 +25,37 @@ CREATE TABLE badges (
 -- Comments
 CREATE TABLE comments (
 	Id INT NOT NULL PRIMARY KEY,
-    PostId INT NOT NULL,
-    Score INT NOT NULL DEFAULT 0,   -- number of upvotes - number of downvotes
-    Text TEXT,
-    CreationDate DATETIME,
-    UserId INT NOT NULL
+    	PostId INT NOT NULL,
+    	Score INT NOT NULL DEFAULT 0,   -- number of upvotes - number of downvotes
+    	Text TEXT,
+    	CreationDate DATETIME,
+    	UserId INT NOT NULL
 );
 
 -- Post History
 CREATE TABLE post_history (
 	Id INT NOT NULL PRIMARY KEY,
-    PostHistoryTypeId SMALLINT NOT NULL,
-    PostId INT NOT NULL,
-    RevisionGUID VARCHAR(36),
-    CreationDate DATETIME,
-    UserId INT NOT NULL,
-    Text TEXT
+    	PostHistoryTypeId SMALLINT NOT NULL,
+    	PostId INT NOT NULL,
+    	RevisionGUID VARCHAR(36),
+    	CreationDate DATETIME,
+    	UserId INT NOT NULL,
+    	Text TEXT
 );
 
 -- Post Links
 CREATE TABLE post_links (
 	Id INT NOT NULL PRIMARY KEY,
-    CreationDate DATETIME DEFAULT NULL,
-    PostId INT NOT NULL,
-    RelatedPostId INT NOT NULL,
-    LinkTypeId INT DEFAULT NULL
+    	CreationDate DATETIME DEFAULT NULL,
+    	PostId INT NOT NULL,
+    	RelatedPostId INT NOT NULL,
+    	LinkTypeId INT DEFAULT NULL
 );
 
 -- Post Types
 CREATE TABLE post_types (
 	Id SMALLINT NOT NULL PRIMARY KEY,
-    Description VARCHAR(32) NOT NULL
+    	Description VARCHAR(32) NOT NULL
 );
 
 INSERT INTO post_types (Id, Description) VALUES
@@ -117,8 +117,8 @@ CREATE TABLE users (
 
 -- Vote Types
 CREATE TABLE vote_types (
-  Id               SMALLINT NOT NULL PRIMARY KEY,
-  Description      VARCHAR(32) NOT NULL
+  	Id SMALLINT NOT NULL PRIMARY KEY,
+  	Description VARCHAR(32) NOT NULL
 );
 
 INSERT INTO vote_types (Id, Description) VALUES
@@ -217,9 +217,9 @@ ALTER TABLE badges
 	ADD FOREIGN KEY (UserId) REFERENCES users(Id);
     
 ALTER TABLE posts
-  ADD FOREIGN KEY (PostTypeId) REFERENCES post_types(Id),
-  ADD FOREIGN KEY (OwnerUserId) REFERENCES users(Id),
-  ADD FOREIGN KEY (LastEditorUserId) REFERENCES users(Id);
+  	ADD FOREIGN KEY (PostTypeId) REFERENCES post_types(Id),
+  	ADD FOREIGN KEY (OwnerUserId) REFERENCES users(Id),
+  	ADD FOREIGN KEY (LastEditorUserId) REFERENCES users(Id);
 
 SET SQL_SAFE_UPDATES = 0;
 DELETE c FROM comments c LEFT JOIN users u ON c.UserId=u.Id WHERE u.Id IS NULL;
