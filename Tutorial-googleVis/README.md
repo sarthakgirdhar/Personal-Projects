@@ -1,4 +1,4 @@
-##Tutorial - googleVis package in R
+## Tutorial - googleVis package in R
 
 
 This demonstration teaches you to use the googleVis package in R to create a few beautiful interactive charts. The charts created are inspired by the work of data guru Hans Rosling. GoogleVis provides an interface between R and the Google Charts Tools, allowing you to create interactive web charts from R without uploading your data to Google. 
