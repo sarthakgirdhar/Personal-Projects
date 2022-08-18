@@ -1,8 +1,8 @@
-##Call Center Optimization
+## Call Center Optimization
 
 This mini project helps in finding out how many representatives are required in a call center to ensure **0** wait time for all its customers.
 
-###Data provided
+### Data provided
 
 1. 10k calls are made in a single day (1440 minutes).
 2. The **Duration of calls** is in *minutes*.
