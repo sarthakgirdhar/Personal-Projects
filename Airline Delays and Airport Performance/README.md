@@ -37,4 +37,4 @@ The scope of data for the two dashboards is Jan 2013 to Aug 2023. The various me
  - DAX calculations to create new measures, tables, and columns. 
  - Visualizations (line chart, bar chart, donut chart, card visuals, text boxes, conditional sub-headings, action-based buttons, icons as buttons, use of tooltips, accessible theme, etc.) 
 
-The comprehensive slides can be viewed [here] (Airline Delays and Airport Performance/Presentation slides.pdf). 
+The comprehensive slides can be viewed [here](https://github.com/sarthakgirdhar/Personal-Projects/blob/master/Airline%20Delays%20and%20Airport%20Performance/Presentation%20slides.pdf)). 
